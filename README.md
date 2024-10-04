@@ -19,8 +19,18 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 # Language support
 
-- Java
-- Go
-- Python
-- C/C++
-- Flutter
+- go
+- java
+- kotlin
+- yaml
+- python
+- markdown
+- clangd
+- json
+- docker
+- sql
+- flutter
+
+# Noted
+
+Plugin customization will live under plugins
