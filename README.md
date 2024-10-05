@@ -16,6 +16,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - python
 - pynvim
 - ruby
+- flutter
 
 # Language support
 
