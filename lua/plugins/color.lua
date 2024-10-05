@@ -1,6 +1,7 @@
 return {
-  "gnmearacaun/zephyr-clear.nvim",
+  "NTBBloodbath/sweetie.nvim",
   config = function()
-    vim.cmd("colorscheme zephyr_clear")
+    vim.cmd.colorscheme("sweetie")
+    vim.o.background = "light"
   end,
 }
