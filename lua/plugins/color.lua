@@ -1,8 +1,13 @@
 return {
-  "Yazeed1s/minimal.nvim",
+  "olimorris/onedarkpro.nvim",
   lazy = false,
+  priority = 1000, -- Ensure it loads first
   config = function()
-    vim.g.minimal_transparent_background = true
-    vim.cmd([[colorscheme minimal-base16]])
+    require("onedarkpro").setup({
+      options = {
+        transparency = true,
+      },
+    })
+    vim.cmd("colorscheme onedark")
   end,
 }
