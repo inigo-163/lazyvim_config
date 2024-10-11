@@ -1,7 +1,8 @@
 return {
-  "NTBBloodbath/sweetie.nvim",
+  "Yazeed1s/minimal.nvim",
+  lazy = false,
   config = function()
-    vim.cmd.colorscheme("sweetie")
-    vim.o.background = "light"
+    vim.g.minimal_transparent_background = true
+    vim.cmd([[colorscheme minimal-base16]])
   end,
 }
