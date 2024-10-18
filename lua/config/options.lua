@@ -36,3 +36,6 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
 
 vim.opt.list = false
+
+-- Disable LazyVim auto format
+vim.g.autoformat = false

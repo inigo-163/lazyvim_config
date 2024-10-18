@@ -18,20 +18,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - ruby
 - flutter
 
-# Language support
-
-- go
-- java
-- kotlin
-- yaml
-- python
-- markdown
-- clangd
-- json
-- docker
-- sql
-- flutter
-
 # Noted
 
 Plugin customization will live under plugins
