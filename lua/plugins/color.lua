@@ -1,17 +1,19 @@
 return {
-  "olimorris/onedarkpro.nvim",
-  lazy = false,
-  priority = 1000, -- Ensure it loads first
+  "aktersnurra/no-clown-fiesta.nvim",
   config = function()
-    require("onedarkpro").setup({
-      options = {
-        cursorline = false, -- Use cursorline highlighting?
-        transparency = true, -- Use a transparent background?
-        terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
-        lualine_transparency = true, -- Center bar transparency?
-        highlight_inactive_windows = false, -- When the window is out of focus, change the normal background?
+    require("no-clown-fiesta").setup({
+      transparent = true, -- Enable this to disable the bg color
+      styles = {
+        -- You can set any of the style values specified for `:h nvim_set_hl`
+        comments = {},
+        functions = {},
+        keywords = {},
+        lsp = { underline = true },
+        match_paren = {},
+        type = { bold = true },
+        variables = {},
       },
     })
-    vim.cmd("colorscheme onedark")
+    vim.cmd([[colorscheme no-clown-fiesta]])
   end,
 }
