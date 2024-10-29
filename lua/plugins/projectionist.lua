@@ -5,7 +5,7 @@ return {
 
 -- Demo java project
 --
--- name: .projectionist.json
+-- name: .projections.json
 -- noted: {Test} look like it exclude Test postfix in filename idk why
 --
 --  {
