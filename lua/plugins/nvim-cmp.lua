@@ -15,12 +15,18 @@ return {
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
   keys = {},
-  opts = function()
+  opts = function(_, opts)
     require("luasnip.loaders.from_vscode").lazy_load()
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
     local cmp = require("cmp")
     local defaults = require("cmp.config.default")()
     local luasnip = require("luasnip")
+
+    local has_words_before = function()
+      unpack = unpack or table.unpack
+      local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+      return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+    end
     return {
       -- view of autocompletion
       view = {
@@ -39,14 +45,37 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
-      mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-        ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+      mapping = vim.tbl_extend("force", opts.mapping, {
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
+
+        -- Tab selection
+        ["<Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            -- You could replace select_next_item() with confirm({ select = true }) to get VS Code autocompletion behavior
+            cmp.select_next_item()
+          elseif vim.snippet.active({ direction = 1 }) then
+            vim.schedule(function()
+              vim.snippet.jump(1)
+            end)
+          elseif has_words_before() then
+            cmp.complete()
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          elseif vim.snippet.active({ direction = -1 }) then
+            vim.schedule(function()
+              vim.snippet.jump(-1)
+            end)
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
