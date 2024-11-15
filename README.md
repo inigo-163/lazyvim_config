@@ -12,11 +12,9 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - lazygit
 - xclip
 - nodejs
-- go
 - python
 - pynvim
-- ruby
-- flutter
+- ruby (plugin use)
 
 # Noted
 
