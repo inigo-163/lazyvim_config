@@ -18,4 +18,5 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 # Noted
 
-Plugin customization will live under plugins
+- Plugin customization will live under plugins.
+- Go!!! using Intellij with IdeaVim for Java and Kotlin.
