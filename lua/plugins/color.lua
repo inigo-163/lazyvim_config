@@ -1,13 +1,9 @@
 return {
-  "projekt0n/github-nvim-theme",
-  name = "github-theme",
+  "Th3Whit3Wolf/space-nvim",
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
   priority = 1000, -- make sure to load this before all the other start plugins
   config = function()
-    require("github-theme").setup({
-      -- ...
-    })
-
-    vim.cmd("colorscheme github_light")
+    vim.g.space_nvim_transparent_bg = true
+    vim.cmd("colorscheme space-nvim")
   end,
 }

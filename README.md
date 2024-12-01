@@ -14,7 +14,8 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - nodejs
 - python
 - pynvim
-- ruby (plugin use)
+- python3-venv
+- ruby (For plugin)
 
 # Noted
 
