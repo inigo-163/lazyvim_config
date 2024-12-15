@@ -23,8 +23,9 @@ return {
     opts = function()
       local opts = {
         options = {
-          section_separators = { left = " ", right = " " },
+          theme = "auto", -- lualine theme
           component_separators = { left = " ", right = " " },
+          section_separators = { left = " ", right = " " },
         },
       }
       return opts

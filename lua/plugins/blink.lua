@@ -53,7 +53,8 @@ return {
       cmdline = {},
     },
     keymap = {
-      ["<CR>"] = { "accept", "fallback" },
+      ["<CR>"] = {},
+      ["<C-y>"] = { "accept", "fallback" },
       ["<Tab>"] = {
         "select_next",
         "snippet_forward",
