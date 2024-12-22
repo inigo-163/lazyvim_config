@@ -53,17 +53,16 @@ return {
       cmdline = {},
     },
     keymap = {
-      ["<CR>"] = {},
-      ["<C-y>"] = { "accept", "fallback" },
-      ["<C-j>"] = {
+      ["<CR>"] = { "accept", "fallback" },
+      ["<Tab>"] = {
         "select_next",
         "snippet_forward",
         "fallback",
       },
-      ["<C-k>"] = {
+      ["<S-Tab>"] = {
         "select_prev",
         "snippet_backward",
-        "fallback",
+        "fallback"
       },
       ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
       ["<C-e>"] = { "hide" },
