@@ -9,13 +9,13 @@ return {
       colors = {
         gray = "#808080",
         white = "#FFFFFF",
-        smoke = "#848884",
+        custom_gray = "#606060",
       },
       themes = function(colors)
         return {
           CursorLineNr = { fg = colors.white },
           LineNr = { fg = colors.gray },
-          Visual = { bg = colors.smoke },
+          Visual = { bg = colors.custom_gray },
         }
       end,
       italics = true,
