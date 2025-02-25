@@ -50,7 +50,10 @@ return {
       -- with blink.compat
       compat = {},
       default = { "lsp", "path", "snippets", "buffer" },
-      cmdline = {},
+    },
+
+    cmdline = {
+      enabled = false,
     },
     keymap = {
       ["<CR>"] = { "accept", "fallback" },
@@ -62,7 +65,7 @@ return {
       ["<S-Tab>"] = {
         "select_prev",
         "snippet_backward",
-        "fallback"
+        "fallback",
       },
       ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
       ["<C-e>"] = { "hide" },
