@@ -39,4 +39,7 @@ vim.opt.list = false
 
 -- Disable LazyVim auto format
 vim.g.autoformat = false
+
 vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
+
+vim.g.lazyvim_cmp = "blink.cmp"
