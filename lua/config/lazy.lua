@@ -39,6 +39,8 @@ require("lazy").setup({
     -- UI
     { import = "lazyvim.plugins.extras.ui.dashboard-nvim" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    -- Editor
+    { import = "lazyvim.plugins.extras.editor.harpoon2" },
     -- Custom
     { import = "plugins" },
   },
