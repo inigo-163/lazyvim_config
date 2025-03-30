@@ -42,4 +42,7 @@ vim.g.autoformat = false
 
 vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
 
-vim.g.lazyvim_cmp = "blink.cmp"
+vim.g.lazyvim_cmp = "auto"
+vim.g.ai_cmp = true
+
+vim.g.lazyvim_picker = "telescope"
