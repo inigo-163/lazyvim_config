@@ -46,6 +46,8 @@ require("lazy").setup({
     -- Coding
     { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
     { import = "lazyvim.plugins.extras.coding.luasnip" },
+    -- AI
+    { import = "lazyvim.plugins.extras.ai.copilot" },
     -- Custom
     { import = "plugins" },
   },
