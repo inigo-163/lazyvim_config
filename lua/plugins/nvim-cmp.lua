@@ -11,6 +11,10 @@ return {
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+    local auto_select = false
+    opts.completion = {
+      completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
+    }
     opts.mapping = cmp.mapping.preset.insert({
       ["<CR>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
