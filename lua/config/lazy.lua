@@ -20,12 +20,10 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
     -- Lang
-    { import = "lazyvim.plugins.extras.lang.java" },
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.prisma" },
-    { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.sql" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
@@ -39,9 +37,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.test.core" },
     -- UI
     { import = "lazyvim.plugins.extras.ui.dashboard-nvim" },
-    { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- Editor
-    { import = "lazyvim.plugins.extras.editor.harpoon2" },
     { import = "lazyvim.plugins.extras.editor.telescope" },
     -- Coding
     { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
